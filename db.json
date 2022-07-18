@@ -41,6 +41,12 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "Peperomia",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Peperomia_trifolia_2011-01-17.jpg/440px-Peperomia_trifolia_2011-01-17.jpg",
+      "price": "77",
+      "id": 8
     }
   ]
 }
