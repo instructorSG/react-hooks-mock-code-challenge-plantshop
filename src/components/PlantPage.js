@@ -4,9 +4,9 @@ import PlantList from "./PlantList";
 import Search from "./Search";
 
 function PlantPage() {
-  const [ newPlant, setNewPlant ] = useState({})
+
   const [ plantList, setPlantList ] = useState([])
-  const [ SearchPlant, setSearchPlant ] = useState('')
+  const [ searchPlant, setSearchPlant ] = useState('')
 
   const baseURL = 'http://localhost:6001/plants'
 
@@ -18,19 +18,20 @@ function PlantPage() {
     )
   }, [])
 
-
   const addPlant = (newPlant) => {
-    const newPlantList = [ newPlant, ...plantList ]
+    const newPlantList = [...plantList, newPlant ]
     setPlantList(newPlantList)
   }
 
-    return (
-      <main>
-        <NewPlantForm addPlant={ addPlant } baseURL={ baseURL } />
-        <Search />
-        <PlantList plantList={ plantList } />
-      </main>
-    );
+  const filteredList = plantList.filter((plant) => plant.name.toLowerCase().includes(searchPlant.toLowerCase()))
+
+  return (
+    <main>
+      <NewPlantForm addPlant={ addPlant } baseURL={ baseURL } />
+      <Search searchPlant={ searchPlant } onSearchChange={ setSearchPlant } />
+      <PlantList plantList={ filteredList } />
+    </main>
+  );
 
 }
 

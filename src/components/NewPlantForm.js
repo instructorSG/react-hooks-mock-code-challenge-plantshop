@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 function NewPlantForm({ addPlant, baseURL }) {
 
-  const initialState = {
+const initialState = {
     name: '',
     image: '',
     price: 0
