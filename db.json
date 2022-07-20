@@ -4,13 +4,13 @@
       "id": 1,
       "name": "Aloe",
       "image": "./images/aloe.jpg",
-      "price": 15.99
+      "price": "6.03"
     },
     {
       "id": 2,
       "name": "ZZ Plant",
       "image": "./images/zz-plant.jpg",
-      "price": 25.98
+      "price": "72.06"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "id": 4,
       "name": "Pothos",
       "image": "./images/pothos.jpg",
-      "price": 12.11
+      "price": "15.16"
     },
     {
       "id": 5,
@@ -47,6 +47,12 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Peperomia_trifolia_2011-01-17.jpg/440px-Peperomia_trifolia_2011-01-17.jpg",
       "price": "77",
       "id": 8
+    },
+    {
+      "name": "Peperomia",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwtYJieo1veKYwaWfiKUyLcpmOJLrW0QlJ4g&usqp=CAU",
+      "price": "123",
+      "id": 9
     }
   ]
 }

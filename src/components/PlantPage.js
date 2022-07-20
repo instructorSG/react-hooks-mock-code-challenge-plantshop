@@ -23,13 +23,29 @@ function PlantPage() {
     setPlantList(newPlantList)
   }
 
+
+  // const modifyPlant = () => { console.log('modify plant') }
+
+const changePrice = (plant, newPrice) => {
+    console.log('in change price')
+  console.log('newPrice plant', plant)
+  const newPlantList = plantList.map((p) => p.id === plant.id ? { ...plant, price: newPrice } : p)
+  setPlantList(newPlantList)
+  }
+
+  const removePlant = (plant) => {
+    console.log('plant to be removed', plant.name)
+    const newPlantList = plantList.filter(p => p.id !== plant.id)
+    setPlantList(newPlantList)
+  }
+
   const filteredList = plantList.filter((plant) => plant.name.toLowerCase().includes(searchPlant.toLowerCase()))
 
   return (
     <main>
       <NewPlantForm addPlant={ addPlant } baseURL={ baseURL } />
       <Search searchPlant={ searchPlant } onSearchChange={ setSearchPlant } />
-      <PlantList plantList={ filteredList } />
+      <PlantList plantList={ filteredList } removePlant={ removePlant } changePrice={ changePrice } />
     </main>
   );
 
