@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 
 function PlantCard({ plant, removePlant, changePrice }) {
-  const [ inStock, setInStock ] = useState(true)
-  const [ newPrice, setNewPrice ] = useState("")
-
   const { id, name, image, price } = plant
+  const [ inStock, setInStock ] = useState(true)
+  const [ newPrice, setNewPrice ] = useState(plant.price)
+
 
   const toggleHandler = () => {
     setInStock((inStock) => !inStock)
@@ -24,13 +24,13 @@ function PlantCard({ plant, removePlant, changePrice }) {
       method: "PATCH",
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
       },
-      body: JSON.stringify({ ...plant, price: newPrice }),
+      body: JSON.stringify({ price: newPrice }),
+      // body: JSON.stringify({ ...plant, price: newPrice }),
     })
     .then(resp=>resp.json())
       .then(changePrice(plant, newPrice))
-    .then(setNewPrice(''))
+    // .then(setNewPrice(plant.price))
   }
 
 
@@ -46,11 +46,11 @@ function PlantCard({ plant, removePlant, changePrice }) {
       ) }
       <button onClick={ deletePlant }>Delete</button>
       <form onSubmit={submitPriceChangeHandler}>
-        <input placeholder="New Price..."
-          type="number" step="0.01"
-          id="price"
-          onChange={(e) =>setNewPrice(e.target.value)}
-          // onChange={(e) =>setNewPrice(parseInt(e.target.value,10))}
+        <input
+          placeholder="New Price..."
+          type="number"
+          step="0.01"
+          onChange={(e) =>setNewPrice(parseFloat(e.target.value))}
           value={newPrice } />
 
         <button type="submit">Update Price</button>

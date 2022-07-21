@@ -10,13 +10,13 @@
       "id": 2,
       "name": "ZZ Plant",
       "image": "./images/zz-plant.jpg",
-      "price": "72.06"
+      "price": "72.75"
     },
     {
       "id": 3,
       "name": "Pilea peperomioides",
       "image": "./images/pilea.jpg",
-      "price": 5.99
+      "price": "5.75"
     },
     {
       "id": 4,
@@ -28,13 +28,13 @@
       "id": 5,
       "name": "Jade",
       "image": "./images/jade.jpg",
-      "price": 10.37
+      "price": 10.35
     },
     {
       "id": 6,
       "name": "Monstera Deliciosa",
       "image": "./images/monstera.jpg",
-      "price": 25.99
+      "price": 25.83
     },
     {
       "id": 7,
@@ -45,7 +45,7 @@
     {
       "name": "Peperomia",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Peperomia_trifolia_2011-01-17.jpg/440px-Peperomia_trifolia_2011-01-17.jpg",
-      "price": "77",
+      "price": 77.82,
       "id": 8
     },
     {
